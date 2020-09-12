@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package streams.ivstream;
+
+option go_package = "github.com/huynguyen-quoc/go/streams/schema/ivstream";
+
+import "streams/common/stream_info.proto";
+
+message InvestmentOpen {
+  string message = 1;
+  int64 investmentId = 2;
+  int64 userId = 3;
+
+  streams.common.StreamInfo  StreamMetadata = 1235;
+}
+
